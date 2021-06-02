@@ -117,8 +117,9 @@ extension QuestionsViewController {
     private func updateMultipleStackView(answers: [Answer]) {
         multipleStackView.isHidden = false
         
-        for (label, answer) in zip(multipleLabels, answers) {
+        for (label, (switcher, answer)) in zip(multipleLabels, zip(multipleSwitches, answers)) {
             label.text = answer.text
+            switcher.isOn = false
         }
     }
     

@@ -18,5 +18,7 @@ class HomeViewController: UIViewController {
         else { return }
         
         vc.questions = questions
-    }    
+    }
+    
+    @IBAction func unwind(segue: UIStoryboardSegue) { }
 }
